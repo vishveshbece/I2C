@@ -1,0 +1,28 @@
+# Logs
+logs/
+*.log
+
+# Simulation outputs
+sim/
+*.vcd
+*.wlf
+*.fsdb
+
+# Verilator build directory
+verilator/
+obj_dir/
+
+# Generated CSV files
+*.csv
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
