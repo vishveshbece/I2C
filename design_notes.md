@@ -1,5 +1,5 @@
 - verilog is a hardware description language
-- developed by gateway design automation and later acquired by cadence systems
+- developed by gateway design automation in 1980 and later acquired by cadence systems
 - it is also used for verification purposes
 - it supports abstraction from structural to behavioural
 - it is used for both simulation based and synthesis based design
@@ -27,6 +27,45 @@
 - After rtl design, verification and synthesis, LEC(logic Equivalence plays a major role comparing the syntehsised with rtl using synopsys formality, cadence conformal)
 
 - next step is placement and routing
-
+- comments can be used are // and /* jilnwkjsk */
+- in verilog the spaces in the string also considered as the character
+- operators unary, binary, conditional
+- number format [size]'[base_format][number]
+- numbers with unsized formats are considered with the default size where the number is considered as decimal
+- signed number sign [size]'[base_format][number]
+- strings are enclosed with quotes
+- identifiers are variables other than reserved words
+- keywords - reserved words
+- a module is a block of verilog code that does a functionality
+- a top level module is the one which contains other sub modules
+- ports are set of signals that act as input and output to the modules
+- port types input, output and inout
+- port syntax [direction] [data_type] [bit_width] [name] [bit_depth]
+- default the ports are unsigned if it is required it can be assigned signed
+- if the type is not declared directly in ports it can be redeclareds
+- inout always should have a tristate logic
+- unconnected ports in instantiation will always have high impedance
+- nets are used to drive the data and not to hold the data
+- wire with three to more bits driving is referred as a vector
+- other data types reg used to store data but not same as flipflop it can also be used for combinational circuits - not synthesizable
+- integer - to store 32 bit data type - not synthesizable
+- time - unsigned 64 bits wide used to store simulation time quantities - not synthesizable
+- realtime is a floating point time - not synthesizable
+- real - 64 bit floating point for arithmetic calculations - not synthesizable
+- it saves the string from lsb to msb with respect to the memory allowed
+- a datatype without a range specification is scalar
+- with range specification is vector
+- bit select - selection of bit through indexing in the data
+- part select - if it is from msb to lsb the part selection should also be in same idealogy
+- tri reg net driven state - takes the value of the driver
+- capacitive state - when it attains the high impedance state it maintains the previous value
+- tri0 acts as a pull down resistor (open source logic)
+- tri1 acts as a pull up resistor (open drain logic)
+- uwire - allows only a single wire
+- supply0, supply1 are used for the vcc, gnd
+- avoid multiplication,division, modulus and power operators directly
+- multiplication, division and modulus are high complexer
+- power is not synthesizable
+- for single bit relational operators are developed into a magnitude comparator
+- for multibits it uses ripple comparison or tree comparison logic
 - 
-
