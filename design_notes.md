@@ -27,6 +27,7 @@
 - After rtl design, verification and synthesis, LEC(logic Equivalence plays a major role comparing the syntehsised with rtl using synopsys formality, cadence conformal)
 
 - next step is placement and routing
+# verilog basics
 - comments can be used are // and /* jilnwkjsk */
 - in verilog the spaces in the string also considered as the character
 - operators unary, binary, conditional
@@ -68,4 +69,37 @@
 - power is not synthesizable
 - for single bit relational operators are developed into a magnitude comparator
 - for multibits it uses ripple comparison or tree comparison logic
+- and truth table z&z- x any highimpedance or unknown with any other than 0 is x
+- or truth table 0|z is x
+# operator precedence table
+- 1 - unary not
+- 2 - power
+- 3 - mul,div and mod
+- 4 - add,sub
+- 5 - shifts
+- 6 - comparison
+- 7 - equality
+- 8 - bitwise and
+- 9 - bitwise xor,xnor
+- 10 - bitwise or
+- 11 - logical and
+- 12 - logical OR
+- 13 - ternary
+
+# measures need to be done
+
+- good design practice involves avoid x and z states in critical logic
+- all the arithmetic operations will not be synthesized for real and real time types
+- -m where for signed integer it stores the 2's complement of the value
+- if the input is 8 bit and output is 8 bit for the sum, the carry will be truncated
+- division by zero leads to the x undefined value
+- parameters are constants defined at elaboration time
+- the calculations made with only parameters will be executed in elaboration/compilation time
+- where the constants will be synthseized directly
+- if any one operand is unsigned the overall operation is considered as unsigned
+# Concatenation Operator
+- multi bit wires and variable can be clubbed together to form a bigger multi net using concatenation or set membership opeartor
+- replication operator where it's synatax is {no_of_times{variable}}
+- nested replication is also allowed
 - 
+
