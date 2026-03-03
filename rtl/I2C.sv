@@ -1,6 +1,8 @@
+`define IDLE 3'b0
+`define START 3'b1
 module(
-    input SDA,
-    input SCL,
+    inout logic SDA,
+    inout logic SCL,
 );
     always @(*) begin
         
